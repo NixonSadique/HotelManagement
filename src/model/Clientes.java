@@ -13,26 +13,44 @@ import java.io.Serializable;
  */
 public class Clientes implements Serializable{
     
-    private double preco;
     private String nome;
-    private int quarto;
-    private String estadia;
+    private int id;
+    private int idQuarto;
+    private String email;
+    private String telefone;
+    private String perfil;
 
-    public String getEstadia() {
-        return estadia;
+    public void setPerfil(String perfil) {
+        this.perfil = perfil;
+    }
+    
+    public String getPerfil() {
+        return perfil;
     }
 
-    public void setEstadia(String estadia) {
-        this.estadia = estadia;
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
     
-    public void setPreco(double preco){
-        this.preco=preco;
+    public void setId(int id){
+        this.id=id;
     }
     
-    public double getPreco(){
-        return preco;
+    public int getId(){
+        return id;
     }
     
     public void setNome(String nome){
@@ -43,11 +61,12 @@ public class Clientes implements Serializable{
         return nome;
     }
     
-    public void setQuarto(int quarto){
-        this.quarto=quarto;
+    public void setIdQuarto(int idQuarto){
+        this.idQuarto=idQuarto;
     }
     
-    public int getQuarto(){
-        return quarto;
+    public int getIdQuarto(){
+        return idQuarto;
     }
+    
 }

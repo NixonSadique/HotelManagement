@@ -8,6 +8,7 @@ package Interface;
 import java.util.Vector;
 import model.Funcionarios;
 import gestorHotel.FicheiroFuncionarios;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 
 /**
@@ -26,8 +27,10 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         }catch(Exception e){
             e.printStackTrace();
         }
+        this.setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("Funcionarios.png")));
     }
-    Vector vector = new Vector();
+    
+    Vector vector = new Vector();    
     
     public void cadastro(){
         Funcionarios funcionario = new Funcionarios();
@@ -166,9 +169,11 @@ public class CadastroFuncionario extends javax.swing.JFrame {
         buttonEliminar = new javax.swing.JButton();
         buttonProcurar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro do Funcionario");
+        setResizable(false);
 
+        labelNome.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         labelNome.setText("Nome:");
 
         textoNome.addActionListener(new java.awt.event.ActionListener() {
@@ -177,14 +182,19 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        labelSenha.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         labelSenha.setText("Senha");
 
+        labelCodigo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         labelCodigo.setText("Codigo:");
 
+        labelFuncao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         labelFuncao.setText("Funcao");
 
+        cBoxFuncao.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         cBoxFuncao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "Recepcionista", "Administrador", "Gerente", " " }));
 
+        labelProcura.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         labelProcura.setText("Procura");
 
         textoProcura.addActionListener(new java.awt.event.ActionListener() {
@@ -193,14 +203,18 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         jLabel1.setText("Genero");
 
         groupGenero.add(radioMasculino);
+        radioMasculino.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         radioMasculino.setText("Masculino");
 
         groupGenero.add(radioFemenino);
+        radioFemenino.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         radioFemenino.setText("Femenino");
 
+        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         jLabel2.setText("Idade");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -275,6 +289,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Operadores"));
 
+        buttonCadastro.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         buttonCadastro.setText("Cadastro");
         buttonCadastro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +297,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        buttonActualizar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         buttonActualizar.setText("Actualizar");
         buttonActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -289,6 +305,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        buttonLimpar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         buttonLimpar.setText("Limpar");
         buttonLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -296,6 +313,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        buttonEliminar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         buttonEliminar.setText("Eliminar");
         buttonEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,6 +321,7 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             }
         });
 
+        buttonProcurar.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); // NOI18N
         buttonProcurar.setText("Procurar");
         buttonProcurar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,11 +370,12 @@ public class CadastroFuncionario extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void textoProcuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textoProcuraActionPerformed

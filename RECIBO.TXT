@@ -1,0 +1,4 @@
+Nome: Tiffany
+Quarto: 1
+Preco: 90000.0
+Obrigado por visitar o HOTEL BELO HORIZONTE, esperamos ve-lo novamente!
